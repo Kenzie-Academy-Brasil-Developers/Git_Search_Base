@@ -1,3 +1,90 @@
+/* 
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700&family=Nunito&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  padding: 0;
+  background-color: black;
+}
+
+:root {
+  --color-primary: #4263eb;
+  --color-secundary: #364fc7;
+  --color-WhiteFixed: #ffffff;
+  --color-grey-0: #0a0c0d;
+  --color-grey-1: #212529;
+  --color-grey-2: #495057;
+  --color-grey-3: #868e96;
+  --color-grey-4: #dee2e6;
+  --color-grey-5: #f8f9fa;
+  --color-grey-opacity-1: rgba(33, 37, 41, 0.5);
+  --color-like: #d7443e;
+
+  --font-title-1: 1.75rem;
+  --font-title-2: 1.25rem;
+  --font-text-1: 1rem;
+  --font-text-2: 0.875rem;
+  --font-text-3: 0.75rem;
+
+  --font-weight-title-1: 700;
+  --font-weight-title-2: 600;
+  --font-weight-text-1: 400;
+
+  --line-height-title-1: 40px;
+  --line-height-title-2: 24px;
+  --line-height-text-1: 28px;
+  --line-height-text-2: 16px;
+
+  --border-radius-1: 2px;
+
+  --size-width-1: 100vw;
+  --size-width-2: 1728px;
+  --size-width-3: 1600px;
+
+  --size-height-1: 100vh;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-grey-1);
+  height: 76px;
+  width: 100%;
+  z-index: 1001;
+  max-width: 1440px;
+}
+
+main {
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 124px;
+  background-color: var(--color-WhiteFixed);
+}
+
+main > div {
+  padding: 0 9px 0 20px;
+  margin: 0 22px 0 22px;
+}
+dialog {
+  padding: 0;
+  width: 385px;
+  border-radius: 8px;
+  border: none;
+  overflow-x: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgba(33, 37, 41, 0.5);
+}
+ */
+
 :root {
   --color-brand-1: #c2255c;
   --color-brand-2: #d6336c;
