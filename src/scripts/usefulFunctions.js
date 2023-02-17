@@ -14,5 +14,5 @@ export function standartString(name) {
 /* volta para a página inicial */
 
 export function backToHome() {
-  window.location.replace("/index.html");
+  window.location.replace("/home.html");
 }
