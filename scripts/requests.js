@@ -19,11 +19,11 @@ export async function requestUser(userName) {
     })
     .then((res) => {
       if (res.message === "Not Found") {
-        window.location.replace("../pages/error/index.html");
+        window.location.replace("../error/index.html");
         return res;
       } else {
         localStorage.setItem("requestUser", JSON.stringify(res));
-        window.location.replace("../pages/profile/index.html");
+        window.location.replace("../profile/index.html");
       }
     });
 
