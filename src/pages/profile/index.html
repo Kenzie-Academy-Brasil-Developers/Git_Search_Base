@@ -5,40 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-
     <!--  CSS GLOBAL STYLES-->
     <link rel="stylesheet" href="../../styles/reset.css" />
     <link rel="stylesheet" href="../../styles/globalStyles.css" />
-    <link rel="stylesheet" href="../../styles/buttons.css" />
-    <link rel="stylesheet" href="../../styles/colors.css" />
-    <link rel="stylesheet" href="../../styles/margins.css" />
-    <link rel="stylesheet" href="../../styles/texts.css" />
 
-    <!--  CSS PROFILE -->
-    <link rel="stylesheet" href="../profile/index.css" />
+    <!--  CSS PÁGINA -->
+    <link rel="stylesheet" href="../../pages/profile/index.css" />
 
-    <!-- SCRIPT -->
-    <script type="module" src="../profile/index.js" defer></script>
+    <!-- SCRIPT GLOBAL -->
+    <script type="module" src="../../scripts/requests.js" defer></script>
+    <script type="module" src="../../scripts/search.js" defer></script>
+    <script type="module" src="../../scripts/usefulFunctions.js" defer></script>
+
+    <!-- SCRIPT GLOBAL -->
+    <script type="module" src="../../pages/profile/index.js" defer></script>
 
     <title>Git Search - User Profile</title>
   </head>
   <body>
-    <header class="container__user">
-      <!--     <div class="box__user">
-        <img src="" alt="" class="img__user" />
-        <name class="title__user"></name>
-      </div> -->
-      <div class="box__change-user">
-        <a class="ancor__change-user" href="">Trocar de Usuário</a>
-      </div>
-    </header>
+    <header class="container__user"></header>
     <main>
       <section class="container-repositories">
         <ul class="list__repositories"></ul>

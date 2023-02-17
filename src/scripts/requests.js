@@ -1,41 +1,50 @@
 import { standartString } from "./usefulFunctions.js";
-import { renderUser, renderRepositories } from "./creatDomElement.js";
 
 //TODO --> FUNCAO RECEBE VALOR INFORMADO PELO USUÁRIO
-//* SE USUÁRIO EXISTE PÁGINA É REDIRECIONADA PARA A PÁGINA PROFILE
 //* SE USUÁRIO NAO EXISTE PÁGINA REDIRECIONADA PARA A PÁGINA ERRO
+//* SE USUÁRIO EXISTE PÁGINA É REDIRECIONADA PARA A PÁGINA PROFILE
 
 export async function requestUser(userName) {
   const user = await fetch(
-    `https://api.github.com/users/${standartString(userName)}`
+    `https://api.github.com/users/${standartString(userName)}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
   )
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json();
+    })
     .then((res) => {
       if (res.message === "Not Found") {
-        /*       window.location.replace("/src/pages/error/index.html"); */
-        return `Ooops! Erro 404`;
+        window.location.replace("/src/pages/error/index.html");
+        return res;
       } else {
-        requestRepository(userName);
         localStorage.setItem("requestUser", JSON.stringify(res));
         window.location.replace("/src/pages/profile/index.html");
-        renderUser(res);
-        return res;
       }
     });
-  console.log(user);
+
   return user;
 }
 
 export async function requestRepository(userName) {
-  const user = await fetch(
-    `https://api.github.com/users/${standartString(userName)}/repos`
+  const repositories = await fetch(
+    `https://api.github.com/users/${standartString(userName)}/repos`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
   )
-    .then((response) => response.json())
+    .then((response) => {
+      return response.json();
+    })
     .then((res) => {
-      localStorage.setItem("repositoriesUser", JSON.stringify(res));
-      renderRepositories(res);
       return res;
     });
-  console.log(user);
-  return user;
+  return repositories;
 }
